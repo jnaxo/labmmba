@@ -1,7 +1,7 @@
 # LABMMBA
 =================
-version: 1.0.1 alpha.
+Version: 1.0.1 alpha.
 
-LABMMBA is Laboratory of molecular microbiology and environmental biotechnology. Belong to Federico Santa María university.
+LABMMBA project is a research dashboard for Laboratory of molecular microbiology and environmental biotechnology, belong to Federico Santa María university.
 
 # Copyright
