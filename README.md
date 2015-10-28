@@ -5,7 +5,8 @@ LABMMBA project is a research dashboard for Laboratory of molecular microbiology
 
 # Requeriments
 
-Grails 3.0 or higher.
+Grails 3.0 or higher
+
 mysql connector java 5.1.37
 
 # Copyright
