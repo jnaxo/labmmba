@@ -69,6 +69,9 @@ dependencies {
     // mysql connector
     runtime "mysql:mysql-connector-java:5.1.37"
 
+    // scaffolding
+    runtime "org.grails.plugins:scaffolding"
+
     runtime "org.grails.plugins:asset-pipeline"
 
     testCompile "org.grails:grails-plugin-testing"
