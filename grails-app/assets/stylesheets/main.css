@@ -5,6 +5,10 @@ html, body{
     background-color: #261821;
 }
 
+.body-private{
+    background-color: #FAFAFA;
+}
+
 /* navbar */
 
 header{
@@ -80,6 +84,10 @@ header{
     background-image: none;
 }
 
+/* sign in */
+.alert-warning{
+    margin-top: 10px;
+}
 
 /* footer */
 footer{
@@ -88,7 +96,7 @@ footer{
     height: 120px;
     margin: 0;
     padding: 20px 0;
-    background-color: #261821
+    background-color: #261821;
     font-family: 'Futura', sans-serif;;
 }
 
