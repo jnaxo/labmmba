@@ -10,6 +10,7 @@ build/
 .project
 .settings
 .classpath
+.asscache
 
 # .gitignore generate by github
 
