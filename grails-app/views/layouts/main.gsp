@@ -20,13 +20,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">
+                        <g:link class="navbar-brand" uri="/">
                             LABMMBA
-                        </a>
+                        </g:link>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">foo</a></li>
+                            <li><g:link uri="/">Home</g:link></li>
                         </ul>
                     </div>
                 </div>

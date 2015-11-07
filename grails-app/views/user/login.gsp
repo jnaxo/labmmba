@@ -13,17 +13,17 @@
         <div class="col-sm-3 col-sm-offset-1 login-container">
             <h4>Sign In</h4>
             <hr>
-            <g:form name="login-form" url="[action: 'authenticate', controller: 'user']">
+            <form name="login-form" method="post" action="${resource('file': 'j_spring_security_check')}">
 
                 <div class="form-group">
-                    <label for="labmmba-email">Email address</label>
-                    <input type="email" class="form-control" id="labmmba-email" name="labmmba-email"
+                    <label for="j_username">Email address</label>
+                    <input type="email" class="form-control" id="j_username" name="j_username"
                            placeholder="Email">
                 </div>
 
                 <div class="form-group">
-                    <label for="labmmba-password">Password</label>
-                    <input type="password" class="form-control" id="labmmba-password" name="labmmba-password"
+                    <label for="j_password">Password</label>
+                    <input type="password" class="form-control" id="j_password" name="j_password"
                            placeholder="Password">
                 </div>
 
@@ -33,7 +33,7 @@
                     </label>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-            </g:form>
+            </form>
 
             <h5>New User</h5>
             <g:link action="create" controller="user" class="btn btn-default">Sign Up</g:link>
