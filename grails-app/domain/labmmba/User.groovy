@@ -13,7 +13,8 @@ class User implements Serializable {
 	boolean accountLocked
 	boolean passwordExpired
 
-	static hasOne = [researcher:Researcher, thesis_advisor:ThesisAdvisor]
+	//static hasOne = [researcher:Researcher, thesis_advisor:ThesisAdvisor]
+    static belongsTo = [researcher:Researcher]
 
 	@Override
 	int hashCode() {
@@ -53,7 +54,7 @@ class User implements Serializable {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
-		thesis_advisor nulleable: true
+		//thesis_advisor nulleable: true
 	}
 
 	static mapping = {
