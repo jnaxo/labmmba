@@ -1,8 +1,8 @@
 package labmmba
 
-class Lab_research_area {
+class LabResearch_area {
 
-    static belongsTo = [lab:Lab, research_area:Research_area]
+    static belongsTo = [laboratory:Lab, research_area:Research_area]
 
     static constraints = {
     }

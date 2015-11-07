@@ -2,8 +2,9 @@ package labmmba
 
 class Research {
 
-    static hasOne = [research_area: Research_area]
-    static hasMany = [collaborators:Research_collaborator]
+    String description
+
+    static hasMany = [collaborators:Research_collaborator, research_areas: Research_area]
     static constraints = {
     }
 }

@@ -4,9 +4,19 @@ class Thesis {
 
     String title
     String year
+    String journal
+    int volume
+    String publisher
+    String url
+    int ISSN
+    String DOI
 
-    static hasMany = [authors:Thesis_authors, keywords:Thesis_keyword]
+    String state
+
+    static hasMany = [authors:Thesis_authors, keywords:Thesis_keyword, commits: Advisor_commit]
 
     static constraints = {
+        keywords nulleable: true
+        commits nulleable: true
     }
 }
