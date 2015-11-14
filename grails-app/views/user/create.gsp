@@ -24,18 +24,16 @@
             <!-- STEP 1 -->
             <div id="signup-step1">
                 <div class="form-group" id="label-name">
-                    <input type="text" class="form-control" id="labmmba-name" name="labmmba-name"
-                           placeholder="Full Name">
+                    <g:textField class="form-control" id="labmmba-name" name="name" placeholder="Full Name"/>
                 </div>
 
                 <div class="form-group" id="label-email">
-                    <input type="email" class="form-control" id="labmmba-email" name="labmmba-email"
-                           placeholder="Email">
+                    <g:textField type="email" class="form-control" id="labmmba-email" name="username"
+                                 placeholder="Email"/>
                 </div>
 
                 <div class="form-group" id="label-password">
-                    <input type="password" class="form-control" id="labmmba-password" name="labmmba-password"
-                           placeholder="Password">
+                    <g:passwordField class="form-control" id="labmmba-password" name="password" placeholder="Password"/>
                 </div>
 
                 <nav>
@@ -50,17 +48,17 @@
             <!-- STEP2 -->
             <div id="signup-step2">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="labmmba-studies" name="labmmba-studies"
-                           placeholder="Undergraduate Studies" required>
+                    <g:textField class="form-control" id="labmmba-studies" name="labmmba-studies"
+                           placeholder="Undergraduate Studies" />
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" id="labmmba-college" name="labmmba-college"
-                           placeholder="College" required>
+                    <g:textField class="form-control" id="labmmba-college" name="labmmba-college"
+                           placeholder="College" />
                 </div>
 
                 <hr>
-                <a href="#" class="btn btn-default" data-toggle="modal" data-target="#postgraduate-modal">
+                <a href="#" class="btn btn-default disabled" data-toggle="modal" data-target="#postgraduate-modal">
                     <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Add postgraduate studies
                 </a>
 
@@ -72,7 +70,7 @@
 
                 <nav>
                     <ul class="pager">
-                        <li class="previous"><a href="#" id="signup-back2" uri="/"><span
+                        <li class="previous"><a href="#" id="signup-back2"><span
                                 aria-hidden="true">&larr;</span> Back</a></li>
                         <li class="next"><a href="#" id="signup-continue2">Continue <span
                                 aria-hidden="true">&rarr;</span></a></li>
@@ -83,7 +81,7 @@
             <!-- STEP3 -->
             <div id="signup-step3">
                 <div class="form-group">
-                    <select class="form-control" id="labmmba-job" name="labmmba-job">
+                    <select class="form-control" id="labmmba-job" name="labjob">
                         <option>Occupancy in the Laboratory</option>
                         <option>Estudiante Pregrado</option>
                         <option>Estudiante Postgrado</option>
@@ -111,10 +109,35 @@
                     <ul class="pager">
                         <li class="previous"><a href="#" id="signup-back3" uri="/"><span
                                 aria-hidden="true">&larr;</span> Back</a></li>
+                        <li class="next"><a href="#" id="signup-continue3">Continue <span
+                                aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- CONFIRM -->
+            <div id="signup-confirm">
+                <p class="text-primary"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Please confirm your information</p>
+                <ul class="list-group">
+                    <li class="list-group-item text-capitalize" id="li-name">Name:</li>
+                    <li class="list-group-item" id="li-email">Email:</li>
+                    <li class="list-group-item" id="li-studies">Studies:</li>
+                    <li class="list-group-item" id="li-postgraduate-studies">
+                        Postgraduate Studies:
+                        <ul class="list-group"></ul>
+                    </li>
+                    <li class="list-group-item" id="li-job">Laboratory Charge:</li>
+                    <li class="list-group-item" id="li-research-area">Research Area:</li>
+                </ul>
+
+                <nav>
+                    <ul class="pager">
+                        <li class="previous"><a href="#" id="signup-back4" uri="/"><span
+                                aria-hidden="true">&larr;</span> Back</a></li>
                         <li><g:submitButton name="signup" value="Save" id="signup-submit" class="btn btn-success"/></li>
                     </ul>
                 </nav>
             </div>
+
 
             <div class="alert alert-danger alert-dismissible" role="alert" id="err-field">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -122,7 +145,7 @@
                 </button>
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Completa todos los campos antes de continuar
+                Completa correctamente todos los campos antes de continuar
             </div>
 
 
@@ -146,7 +169,7 @@
                             <h4 class="modal-title" id="myModalLabel">Postgraduate Studies</h4>
                         </div>
 
-                        <g:form id="postgraduate-form" >
+                        <g:form id="postgraduate-form">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="labmmba-poststudies"

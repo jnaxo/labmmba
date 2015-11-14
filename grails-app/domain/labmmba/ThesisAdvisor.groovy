@@ -3,12 +3,12 @@ package labmmba
 class ThesisAdvisor {
 
     String name
-    //User user
 
+    static belongsTo = [user:User]
     static hasMany = [commits:Advisor_commit, students:Researcher]
 
     static constraints = {
         commits nulleable: true
-      //  user nulleable: true
+        user nulleable: true
     }
 }

@@ -13,7 +13,7 @@ class BootStrap {
         def userRole = new Role('ROLE_USER').save()
         def anonymously = new Role('IS_AUTHENTICATED_ANONYMOUSLY').save()
 
-        def testUser = new User(username:'foo@bar.cl', password:'1234', researcher:new Researcher(lab_job:'director')).save()
+        def testUser = new User(username:'foo@bar.cl', password:'1234',name:'foo', researcher:new Researcher(lab_job:'director')).save()
 
         UserRole.create testUser, adminRole, true
 

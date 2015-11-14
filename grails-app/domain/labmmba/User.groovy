@@ -1,4 +1,5 @@
 package labmmba
+import labmmba.ThesisAdvisor
 
 class User implements Serializable {
 
@@ -7,13 +8,13 @@ class User implements Serializable {
 	transient springSecurityService
 
 	String username
+	String name
 	String password
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
 
-	//static hasOne = [researcher:Researcher, thesis_advisor:ThesisAdvisor]
     static belongsTo = [researcher:Researcher]
 
 	@Override
@@ -53,8 +54,8 @@ class User implements Serializable {
 
 	static constraints = {
 		username blank: false, unique: true
+		name blank: false
 		password blank: false
-		//thesis_advisor nulleable: true
 	}
 
 	static mapping = {

@@ -16,9 +16,12 @@ class Researcher {
 
 
     static constraints = {
+        lab nulleable: true
+        thesis_advisor nulleable: true
         conferences nulleable: true
         sciencist_publications nulleable: true
         thesis nulleable: true
-        thesis_advisor nulleable: true
+        researchs nulleable: true
+        labs nulleable: true
     }
 }
