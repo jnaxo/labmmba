@@ -89,6 +89,27 @@ header{
     margin-top: 10px;
 }
 
+#signup-step2, #signup-step3, #signup-confirm{
+    display: none;
+}
+
+#signup-submit{
+    position: relative;
+    right: -30%;
+}
+
+#postgraduate-list{
+    margin-top: 10px;
+}
+
+#li-postgraduate-studies{
+    display: none;
+}
+
+#err-field{
+    display: none;
+}
+
 /* footer */
 footer{
     color: #afafaf;

@@ -1,16 +1,64 @@
 package labmmba
+import labmmba.ThesisAdvisor
 
-class User {
+class User implements Serializable {
 
-    String email
-    String password
-    Date user_created
-    Date last_update
+	private static final long serialVersionUID = 1
+
+	transient springSecurityService
+
+	String username
+	String name
+	String password
+	boolean enabled = true
+	boolean accountExpired
+	boolean accountLocked
+	boolean passwordExpired
 
     static belongsTo = [researcher:Researcher]
 
-    static constraints = {
-        email (email:true)
-        password (blank:false, password:true)
-    }
+	@Override
+	int hashCode() {
+		username?.hashCode() ?: 0
+	}
+
+	@Override
+	boolean equals(other) {
+		is(other) || (other instanceof User && other.username == username)
+	}
+
+	@Override
+	String toString() {
+		username
+	}
+
+	Set<Role> getAuthorities() {
+		UserRole.findAllByUser(this)*.role
+	}
+
+	def beforeInsert() {
+		encodePassword()
+	}
+
+	def beforeUpdate() {
+		if (isDirty('password')) {
+			encodePassword()
+		}
+	}
+
+	protected void encodePassword() {
+		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
+	}
+
+	static transients = ['springSecurityService']
+
+	static constraints = {
+		username blank: false, unique: true
+		name blank: false
+		password blank: false
+	}
+
+	static mapping = {
+		password column: '`password`'
+	}
 }

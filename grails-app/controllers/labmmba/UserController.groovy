@@ -1,41 +1,43 @@
 package labmmba
 
+import grails.plugin.springsecurity.annotation.Secured
+
 class UserController {
 
-    def scaffold = User
+    static allowedMethods = [save:'POST']
 
+    @Secured(['ROLE_ADMIN'])
     def index() {
-        if(session.user){
-            redirect(controller: 'researcher', action:'index')
-        } else {
-            redirect(controller: 'user', action:'login')
-        }
+
     }
 
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def login(){
-        if(params.login){
-            println("login")
-        }
 
     }
 
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def create(){
-
     }
 
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def save(){
+        def role = Role.findByAuthority('ROLE_USER')
+        def researcher = new Researcher(lab_job: params.labjob).save()
+        def user = new User(username:params.username, password:params.password, name:params.name, researcher: researcher)
+        if(!user.save(flush:true)){
+            render view: 'create', model: [user:user]
+            return
+        }
 
+        UserRole.create user, role, true
+
+        redirect action: show, id: user.id
     }
 
-    def authenticate = {
-        def user = User.findByEmailAndPassword(params.email, params.password)
-        if(user){
-            session.user = user
-            flash.message = "Hello ${user.name}!"
-            redirect(controller:"researcher", action:"show")
-        }else{
-            redirect(controller: 'user', action: 'login', params:[login:'false'])
-        }
+    def show(){
+        [user: User.get(params.id)]
+        [researcher: Researcher.get(user_id: user.id)]
     }
 
     def logout(){
