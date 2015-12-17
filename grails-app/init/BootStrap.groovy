@@ -17,7 +17,7 @@ class BootStrap {
         def researcher = new Researcher()
         researcher.lab_job = 'external admin'
 
-        def studies = new Studies(title: 'ingenieria civil construccion', pregraduate: true, college: 'UTFSM',city:'valparaiso', country:'Chile', year:2012)
+        def studies = new Studies(title: 'ingenieria civil construccion', college: 'UTFSM',city:'valparaiso', country:'Chile', year:2012)
 
         def user = new User(username:'foo@bar.cl', password:'1234', name:'Anna Speranza Espinoza Tofalos')
         researcher.user = user

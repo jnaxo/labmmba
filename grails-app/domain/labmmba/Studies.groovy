@@ -2,7 +2,7 @@ package labmmba
 
 class Studies {
     String title
-    boolean pregraduate
+    boolean posgraduate = false
     String college
     String city
     String country
@@ -12,5 +12,8 @@ class Studies {
 
 
     static constraints = {
+        city nullable: true
+        country nullable: true
+        year nullable: true
     }
 }

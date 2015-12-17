@@ -4,8 +4,9 @@ class Researcher {
 
     User user
     String lab_job
+    Research_area research_area
 
-    static hasOne = [lab_management:Lab, thesis_advisor: ThesisAdvisor, research_area:Research_area]
+    static hasOne = [lab_management:Lab, thesis_advisor: ThesisAdvisor]
     static hasMany = [
             conferences:Conference_assistant,
             sciencist_publications: Sciencist_publication,

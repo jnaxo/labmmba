@@ -1,5 +1,4 @@
 package labmmba
-import labmmba.ThesisAdvisor
 
 class User implements Serializable {
 
