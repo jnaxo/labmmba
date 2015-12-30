@@ -29,7 +29,7 @@
                         <ul class="nav navbar-nav" id="nav-cont">
                             <li class="navbar-admin"><g:link uri="/">Home</g:link></li>
                             <li class="navbar-admin"><a href="#">Investigaciones</a></li>
-                            <li class="navbar-admin"><a href="#">Tesis</a></li>
+                            <li class="navbar-admin"><g:link uri="/thesis/index/">Tesis</g:link></li>
                             <li class="navbar-admin"><a href="#">Docs Científicos</a></li>
                             <li class="navbar-admin"><a href="#">Colaboradores</a></li>
                             <li class="navbar-admin"><g:link uri="#">Account Settings</g:link></li>
