@@ -3,8 +3,7 @@ package labmmba
 class Sciencist_publication {
 
     Date date
-
-    static hasOne = [researcher:Researcher]
+    Researcher author
 
     static constraints = {
     }
