@@ -31,9 +31,12 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Colaboradores</a></li>
-                        <li><a href="#">Investigación</a></li>
-                        <li><a href="#">Integrantes</a></li>
+                        <li class="navbar-admin"><g:link uri="/">Home</g:link></li>
+                        <li><a href="#" class="active">Colaboradores</a></li>
+                        <li><a href="#" >Investigación</a></li>
+                        <li ${controllerName.equals('Researcher') ? 'class=active' : ''}>
+                            <g:link controller="researcher" action="list">Integrantes Laboratorio</g:link>
+                        </li>
                         <li><a href="#" data-toggle="modal" data-target="#locationMap">Ubicación</a></li>
                     </ul>
                 </div>

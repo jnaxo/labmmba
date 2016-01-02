@@ -22,25 +22,39 @@ header{
     background-image: none;
     border: none;
     border-radius: 0;
-
+    text-align: center;
 }
 
 .navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:link, .navbar-default .navbar-nav li a:visited{
-    color:#cfcfcf;
+    color:#dfdfdf;
 }
-
 
 .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:active{
     color:#fff;
 }
 
 .navbar-default .navbar-brand{
-    color: #cfcfcf;
+    color: #dfdfdf;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
     color: #fff;
 }
+.navbar-brand, .navbar-nav > li > a {
+    text-shadow: none;
+}
+
+.navbar-default .navbar-nav > .active{
+    color: #fff;
+    background: #d65c14;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #d65c14;
+}
+
 
 /* body */
 .body-public{
