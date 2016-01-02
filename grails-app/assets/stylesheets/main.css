@@ -55,7 +55,7 @@ header{
 }
 
 
-/* body */
+/* body global */
 .body-public{
     margin: 0;
     padding: 0;
@@ -63,6 +63,13 @@ header{
     height: auto !important;
     height: 550px;
     background-color: white;
+}
+.right-block{
+    float: right;
+}
+
+.panel-footer{
+    min-height: 55px;
 }
 
 /* login */

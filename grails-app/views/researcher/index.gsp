@@ -72,7 +72,7 @@
     </div>
 
     <!-- notification panel -->
-    <div class="col-sm-2" id="notification-panel">
+    <div class="col-md-2" id="notification-panel">
         <div class="panel panel-default">
             <div class="panel-body">
                 Panel content

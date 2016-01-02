@@ -12,6 +12,7 @@ class Researcher {
             sciencist_publications: Sciencist_publication,
             thesis: Thesis_authors,
             researchs: Research_collaborator,
+            research_projects: Research_project,
             labs:Lab_member,
             studies: Studies
     ]
