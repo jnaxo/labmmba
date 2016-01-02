@@ -31,9 +31,10 @@
                 <div class="col-md-4">
                     <div class="panel panel-primary">
                         <div class="panel-body">
-                            <g:img class="img-responsive img-circle" dir="images" file="male-profile.png"
+                            <g:img class="img-responsive img-circle center-block" dir="images" file="male-profile.png"
                                    alt="profile picture"/>
                         </div>
+
                         <div class="panel-footer">${r.user.name}</div>
                     </div>
                 </div>

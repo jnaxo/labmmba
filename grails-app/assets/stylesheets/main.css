@@ -22,19 +22,18 @@ header{
     background-image: none;
     border: none;
     border-radius: 0;
-    text-align: center;
 }
 
 .navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:link, .navbar-default .navbar-nav li a:visited{
-    color:#dfdfdf;
-}
-
-.navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:active{
     color:#fff;
 }
 
+.navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:active{
+    color:#FD8743;
+}
+
 .navbar-default .navbar-brand{
-    color: #dfdfdf;
+    color: #fff;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
@@ -266,23 +265,17 @@ footer{
 @media (min-width: 768px){
 
     .navbar-header{
-        width:20%;
-    }
-
-    .navbar--brand-admin{
-        width: 10%;
-    }
-
-    #nav-cont{
-        width: 90%;
+        width:10%;
     }
 
     .navbar-default .navbar-nav{
-        width: 80%;
+        width: 90%;
     }
 
     .navbar-default .navbar-nav li{
-        width: 25%;
+        width: 20%;
+        text-align: center;
+        font-size: 14px;
     }
 
     .navbar-default .navbar-nav .navbar-admin{

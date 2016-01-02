@@ -14,7 +14,7 @@
         <header>
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <div class="navbar--brand-admin">
+                    <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
@@ -26,9 +26,13 @@
                         </g:link>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav" id="nav-cont">
-                            <li class="navbar-admin"><g:link uri="/">Home</g:link></li>
-                            <li class="navbar-admin"><a href="#">Investigaciones</a></li>
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-admin ${controllerName.equals('researcher') ? 'active' : ''}">
+                                <g:link uri="/">Home</g:link>
+                            </li>
+                            <li class="navbar-admin class="navbar-admin ${controllerName.equals('research') ? 'active' : ''}">
+                                <a href="#">Investigaciones</a>
+                            </li>
                             <li class="navbar-admin"><a href="#">Tesis</a></li>
                             <li class="navbar-admin"><a href="#">Docs Científicos</a></li>
                             <li class="navbar-admin"><a href="#">Colaboradores</a></li>
