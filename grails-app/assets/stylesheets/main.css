@@ -170,6 +170,11 @@ header{
     height: 100%;
 }
 
+/* location */
+#location-map-img{
+    margin: 0 auto;
+}
+
 /* footer */
 footer{
     color: #afafaf;
