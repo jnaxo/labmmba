@@ -13,8 +13,8 @@ class UserController {
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def login(){
-
     }
+
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def create(){
@@ -23,24 +23,31 @@ class UserController {
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def save(){
         def role = Role.findByAuthority('ROLE_USER')
-        def researcher = new Researcher(lab_job: params.labjob).save()
-        def user = new User(username:params.username, password:params.password, name:params.name, researcher: researcher)
-        if(!user.save(flush:true)){
+        def researcher = new Researcher(lab_job: params.labjob)
+        def studies = new Studies(title:params.studies, college:params.college)
+        def user = new User(username:params.username, password:params.password, name:params.name)
+        researcher.user = user
+        researcher.addToStudies(studies)
+
+        if(!researcher.save(flush:true)){
             render view: 'create', model: [user:user]
             return
         }
 
         UserRole.create user, role, true
 
-        redirect action: show, id: user.id
+        redirect controller: 'researcher', action: 'index'
+       // redirect action: 'success' id= '1'
     }
 
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    def success(){
+        if(params.id != null){
+            redirect controller: 'user', action: 'login'
+        }
+    }
     def show(){
-        [user: User.get(params.id)]
-        [researcher: Researcher.get(user_id: user.id)]
-    }
-
-    def logout(){
 
     }
+
 }

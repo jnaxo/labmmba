@@ -110,6 +110,66 @@ header{
     display: none;
 }
 
+/* profile */
+#profile-pic{
+    width: 110px;
+    height: 110px;
+    display:block;
+    margin:5% auto;
+}
+#profile-info{
+    font-size: 11px;
+    text-transform: capitalize;
+}
+#profile-name{
+    font-size: 11px;
+    color: #261821;
+    font-weight: 500;
+}
+
+#profile-studies{
+    font-weight: 500;
+    color: #888;
+}
+.hr-small{
+    margin: 5px;
+}
+
+/* searcher */
+#searcher-input{
+    margin-top: 9%;
+    margin-bottom: 2%;
+}
+
+/* panels */
+.panel-primary{
+    margin: 7% 0;
+}
+
+.panel-primary .panel-heading{
+    position: relative;
+    top: -15px;
+    width: 30%;
+    height: 30px;
+    margin-left: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 7px;
+}
+.panel-primary .panel-heading .panel-title{
+    font-size: 14px;
+}
+
+
+#notification-panel{
+    height: 400px;
+}
+#notification-panel .panel-default{
+    margin-top: 50px;
+    height: 100%;
+}
+
 /* footer */
 footer{
     color: #afafaf;
@@ -190,11 +250,25 @@ footer{
         width:20%;
     }
 
+    .navbar--brand-admin{
+        width: 10%;
+    }
+
+    #nav-cont{
+        width: 90%;
+    }
+
     .navbar-default .navbar-nav{
-        width: 75%;
+        width: 80%;
     }
 
     .navbar-default .navbar-nav li{
         width: 25%;
+    }
+
+    .navbar-default .navbar-nav .navbar-admin{
+        width: 16%;
+        text-align: center;
+        font-size: 14px;
     }
 }

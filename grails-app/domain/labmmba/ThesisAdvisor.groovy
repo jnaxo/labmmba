@@ -8,7 +8,8 @@ class ThesisAdvisor {
     static hasMany = [commits:Advisor_commit, students:Researcher]
 
     static constraints = {
-        commits nulleable: true
-        user nulleable: true
+        commits nullable: true
+        user nullable: true
+        students nullable: true
     }
 }

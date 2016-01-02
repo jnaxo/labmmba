@@ -48,12 +48,12 @@
             <!-- STEP2 -->
             <div id="signup-step2">
                 <div class="form-group">
-                    <g:textField class="form-control" id="labmmba-studies" name="labmmba-studies"
+                    <g:textField class="form-control" id="labmmba-studies" name="studies"
                            placeholder="Undergraduate Studies" />
                 </div>
 
                 <div class="form-group">
-                    <g:textField class="form-control" id="labmmba-college" name="labmmba-college"
+                    <g:textField class="form-control" id="labmmba-college" name="college"
                            placeholder="College" />
                 </div>
 
