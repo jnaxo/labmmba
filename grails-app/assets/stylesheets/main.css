@@ -154,8 +154,24 @@ header{
 .hr-small{
     margin: 5px;
 }
+<<<<<<< HEAD
 
 /* searcher */
+=======
+#tituloinfo{
+    display: none;
+}
+#titulostudies{
+    display: none;
+}
+#titulopartners{
+    display: none;
+}
+#titulothesis{
+    display: none;
+}
+
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
 #searcher-input{
     margin-top: 9%;
     margin-bottom: 2%;
@@ -190,11 +206,14 @@ header{
     height: 100%;
 }
 
+<<<<<<< HEAD
 /* location */
 #location-map-img{
     margin: 0 auto;
 }
 
+=======
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
 /* footer */
 footer{
     color: #afafaf;
@@ -275,12 +294,30 @@ footer{
         width:10%;
     }
 
-    .navbar-default .navbar-nav{
+    .navbar--brand-admin{
+        width: 10%;
+    }
+
+    #nav-cont{
         width: 90%;
+    }
+
+    .navbar-default .navbar-nav{
+<<<<<<< HEAD
+        width: 90%;
+=======
+        width: 80%;
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
     }
 
     .navbar-default .navbar-nav li{
         width: 20%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .navbar-default .navbar-nav .navbar-admin{
+        width: 16%;
         text-align: center;
         font-size: 14px;
     }

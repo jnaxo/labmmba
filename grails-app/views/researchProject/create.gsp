@@ -38,7 +38,7 @@
             <div class="form-group" id="label-age">
                 <label for="labmmba-age" class="col-sm-2 control-label">Años de Ejecución</label>
                 <div class="col-sm-10">
-                    <g: class="form-control" id="labmmba-age" name="kind" placeholder="e.j: fondef"/>
+                    <g:textField class="form-control" id="labmmba-age" name="age" placeholder="e.j: 2010-2013"/>
                 </div>
             </div>
 

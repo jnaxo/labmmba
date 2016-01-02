@@ -56,7 +56,6 @@
                     <g:textField class="form-control" id="labmmba-college" name="college"
                            placeholder="College" />
                 </div>
-
                 <hr>
                 <a href="#" class="btn btn-default disabled" data-toggle="modal" data-target="#postgraduate-modal">
                     <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Add postgraduate studies

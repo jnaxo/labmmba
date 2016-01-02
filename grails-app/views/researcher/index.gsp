@@ -14,6 +14,7 @@
             <g:img id="profile-pic" class="img-responsive img-circle" dir="images" file="male-profile.png"
                    alt="profile picture"/>
         </g:link>
+<<<<<<< HEAD
         <ul class="list-group" id="profile-info">
             <li class="list-group-item" id="profile-name">${user.getName()}</li>
             <li class="list-group-item">${researcher.getLab_job()}</li>
@@ -32,10 +33,21 @@
                 </g:each>
 
             </li>
+=======
+        <ul class="nav nav-pills nav-stacked" >
+            <li class="active" role="presentation" id="botoninfo" ><a href="#">Informacion General</a></li>
+            <li role="presentation" id="botonstudies" ><a href="#">Estudios </a> </li>
+            <li role="presentation" id="botonpartners"><a href="#">Colegas </a> </li>
+            <li role="presentation" id="botonthesis"><a href="#">Thesis </a></li>
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
             <li class="list-group-item text-center"><g:link uri='/j_spring_security_logout'
                                                             class="btn btn-danger btn-sm">Logout</g:link></li>
         </ul>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
     <!-- main panel-->
     <div class="col-md-8">
         <!-- SEARCHER -->
@@ -49,6 +61,77 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+        <!-- Info -->
+        <div class="panel panel-primary" id="tituloinfo">
+            <div class="panel-heading">
+                <h3 class="panel-title">Informacion Personal</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group" id="profile-info">
+                    <li class="list-group-item" id="profile-name">${user.getName()}</li>
+                    <li class="list-group-item">${researcher.getLab_job()}</li>
+                    <li class="list-group-item">área inv: Biotecnología</li>
+                    <li class="list-group-item" id="profile-studies">
+                        <g:each in="${researcher.getStudies()}" var="std">
+                            <g:if test="${std.getPosgraduate() == false}">
+                                ${std.getTitle()}<br>
+                            </g:if>
+                        </g:each>
+                        <g:each in="${researcher.getStudies()}" var="std">
+                            <g:if test="${std.getPosgraduate() == true}">
+                                <hr class="hr-small">
+                                ${std.getTitle()}<br>
+                            </g:if>
+                        </g:each>
+                    </li>
+                    <li class="list-group-item" id="profile-college">
+                        <g:each in="${researcher.getStudies()}" var="std">
+                            <g:if test="${std.getPosgraduate() == false}">
+                                ${std.getCollege()}<br>
+                            </g:if>
+                        </g:each>
+                        <g:each in="${researcher.getStudies()}" var="std">
+                            <g:if test="${std.getPosgraduate() == true}">
+                                <hr class="hr-small">
+                                ${std.getCollege()}<br>
+                            </g:if>
+                    </g:each>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- Studies -->
+        <div class="panel panel-primary" id="titulostudies">
+            <div class="panel-heading">
+                <h3 class="panel-title">Studies</h3>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+        <!-- Partners -->
+        <div class="panel panel-primary" id="titulopartners">
+            <div class="panel-heading">
+                <h3 class="panel-title">Partner(s)</h3>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+        <!-- Thesis -->
+        <div class="panel panel-primary" id="titulothesis">
+            <div class="panel-heading">
+                <h3 class="panel-title">Thesis</h3>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
         <!-- REPORTS -->
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -72,7 +155,11 @@
     </div>
 
     <!-- notification panel -->
+<<<<<<< HEAD
     <div class="col-md-2" id="notification-panel">
+=======
+    <div class="col-sm-2" id="notification-panel">
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
         <div class="panel panel-default">
             <div class="panel-body">
                 Panel content
@@ -81,6 +168,12 @@
 
     </div>
 </div>
+<<<<<<< HEAD
 
 </body>
 </html>
+=======
+<asset:javascript src="profile.js"/>
+</body>
+</html>
+>>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
