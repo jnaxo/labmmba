@@ -1,14 +1,24 @@
-html, body{
+html{
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: #261821;
 }
-
-.body-private{
-    background-color: #FAFAFA;
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 550px;
+    height: auto !important;
+    height: 550px;
 }
 
+.body-private{
+   /* background-color: #FAFAFA;*/
+}
+
+.body-public{
+    background-color: white;
+}
 /* navbar */
 
 header{
@@ -56,14 +66,7 @@ header{
 
 
 /* body global */
-.body-public{
-    margin: 0;
-    padding: 0;
-    min-height: 550px;
-    height: auto !important;
-    height: 550px;
-    background-color: white;
-}
+
 .right-block{
     float: right;
 }
@@ -154,10 +157,10 @@ header{
 .hr-small{
     margin: 5px;
 }
-<<<<<<< HEAD
+
 
 /* searcher */
-=======
+
 #tituloinfo{
     display: none;
 }
@@ -171,7 +174,7 @@ header{
     display: none;
 }
 
->>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
+
 #searcher-input{
     margin-top: 9%;
     margin-bottom: 2%;
@@ -206,14 +209,12 @@ header{
     height: 100%;
 }
 
-<<<<<<< HEAD
+
 /* location */
 #location-map-img{
     margin: 0 auto;
 }
 
-=======
->>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
 /* footer */
 footer{
     color: #afafaf;
@@ -303,11 +304,7 @@ footer{
     }
 
     .navbar-default .navbar-nav{
-<<<<<<< HEAD
         width: 90%;
-=======
-        width: 80%;
->>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
     }
 
     .navbar-default .navbar-nav li{

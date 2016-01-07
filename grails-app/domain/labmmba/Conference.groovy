@@ -7,7 +7,7 @@ class Conference {
     String city
     String country
 
-    static hasMany = [assistants:Conference_assistant]
+    static hasMany = [assistants: Conference_assistant]
 
     static constraints = {
     }

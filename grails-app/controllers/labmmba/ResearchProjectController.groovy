@@ -9,4 +9,6 @@ class ResearchProjectController {
 
     @Secured(['ROLE_ADMIN', 'ROLE_USER'])
     def create(){}
+
+    def save(){}
 }

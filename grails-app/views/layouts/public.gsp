@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es-CL" class="no-js">
-<<<<<<< HEAD
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,23 +17,6 @@
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-=======
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" type="image/png" href="${createLinkTo(dir:'images',file:'favicon.png')}">
-        <title><g:layoutTitle default="Grails"/></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <asset:stylesheet src="application.css"/>
-        <asset:javascript src="application.js"/>
-        <g:layoutHead/>
-    </head>
-    <body>
-        <div class="body-public">
-        <header>
-            <nav class="navbar navbar-default">
-              <div class="container-fluid">
->>>>>>> fdd45605f71c621be78c0d6877ad362d2cc9da1a
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

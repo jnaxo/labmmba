@@ -38,7 +38,8 @@
             </div>
         </div>
     </div>
-    <!-- notification panel -->
+    <!-- notification panel --
+
     <div class="col-md-2" id="notification-panel">
         <div class="panel panel-default">
             <div class="panel-body">
@@ -46,7 +47,7 @@
             </div>
         </div>
 
-    </div>
+    </di--v-->
 </div>
 
 </body>
