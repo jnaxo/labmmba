@@ -26,10 +26,16 @@
                         </g:link>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav" id="nav-cont">
-                            <li class="navbar-admin"><g:link uri="/">Home</g:link></li>
-                            <li class="navbar-admin"><a href="#">Investigaciones</a></li>
-                            <li class="navbar-admin"><g:link uri="/thesis/index/">Tesis</g:link></li>
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-admin ${controllerName.equals('researcher') ? 'active' : ''}">
+                                <g:link uri="/">Home</g:link>
+                            </li>
+                            <li class="navbar-admin ${controllerName.equals('researchProject') ? 'active' : ''}">
+                                <g:link controller="researchProject">Investigaciones</g:link>
+                            </li>
+                            <li class="navbar-admin">
+                                <a href="#">Tesis</a>
+                            </li>
                             <li class="navbar-admin"><a href="#">Docs Científicos</a></li>
                             <li class="navbar-admin"><a href="#">Colaboradores</a></li>
                             <li class="navbar-admin"><g:link uri="#">Account Settings</g:link></li>
@@ -41,5 +47,16 @@
         <div class="container">
             <g:layoutBody/>
         </div>
+    <footer class="text-capitalize">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 cols-sm-offset-1">
+                    laboratorio de microbiología molecular y biotecnología ambiental<br>
+                    Universidad Federico Santa maría <br>
+                    FISw - Grupo 12
+                </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>

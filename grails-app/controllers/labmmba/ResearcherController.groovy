@@ -16,4 +16,9 @@ class ResearcherController {
     }
 
     def show(){}
+
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    def list(){
+        render(view: "list", model:[controllerName:'Researcher', researchers:Researcher.list()])
+    }
 }
