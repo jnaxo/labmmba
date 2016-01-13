@@ -28,7 +28,20 @@
                     <div class="panel-heading"><b>Mis</b> Proyectos de investigación</div>
 
                     <div class="panel-body">
-                        No participas en ningún proyecto de investigación.
+                        <g:if test="${projects}">
+                            <div class="list-group">
+                                <g:each in="${projects}" var="p">
+                                    <a href="#" class="list-group-item text-capitalize">
+                                        <h4>${p.title} <span class="label label-default">${p.research_areas[0].name}</span></h4>
+                                        <p>${p.description}</p>
+                                    </a>
+                                </g:each>
+                            </div>
+                        </g:if>
+                        <g:else>
+                            No participas en ningún proyecto de investigación.
+                        </g:else>
+
                     </div>
                     <div class="panel-footer">
                         <g:link controller="researchProject" action="create" class="btn btn-success right-block">Nuevo Proyecto</g:link>

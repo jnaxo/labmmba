@@ -30,6 +30,22 @@
                                  placeholder="Una breve descripción..."/>
                 </div>
             </div>
+            
+            <div class="form-group" id="label-area">
+                <label for="labmmba-area" class="col-sm-2 control-label">Área de Investigación</label>
+                <div class="col-sm-10">
+                    <g:select class="form-control" id="labmmba-area" name="areas"
+                              from="${research_areas}" optionKey="id" optionValue="name" noSelection="${['':'Otra área']}"/>
+                </div>                 
+            </div>
+
+            <div class="form-group" id="label-other">
+                <label for="labmmba-other" class="col-sm-2 control-label"></label>
+
+                <div class="col-sm-10">
+                    <g:textField class="form-control" id="labmmba-other" name="other" placeholder="Nombre área de investigación ..."/>
+                </div>
+            </div>
 
             <div class="form-group" id="label-kind">
                 <label for="labmmba-kind" class="col-sm-2 control-label">Tipo</label>

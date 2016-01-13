@@ -30,7 +30,7 @@ class UserController {
         researcher.addToStudies(studies)
 
         if(!researcher.save(flush:true)){
-            render view: 'create', model: [user:user]
+            render view: 'error'
             return
         }
 

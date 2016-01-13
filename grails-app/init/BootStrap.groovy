@@ -3,13 +3,21 @@ import labmmba.Studies
 import labmmba.Role
 import labmmba.User
 import labmmba.UserRole
-
+import labmmba.Research_area
 
 class BootStrap {
 
 
     def init = {
 
+        /* ResearchAreas */
+        def reseach_areas = (String[])["Biotecnología vegetal", "Compuestos bioactivos", "Microbiología", "Biotecnología Ambiental"]
+
+        reseach_areas.each{ ra_name ->
+            new Research_area(name: ra_name).save()
+        }
+
+        /* default users */
         def adminRole = new Role('ROLE_ADMIN').save()
         def userRole = new Role('ROLE_USER').save()
         def anonymously = new Role('IS_AUTHENTICATED_ANONYMOUSLY').save()
