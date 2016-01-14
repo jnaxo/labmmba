@@ -21,36 +21,32 @@
                 </div>
             </div>
         </div>
-        <!-- list -->
+        <!-- show -->
         <div class="row">
             <div class="col-md-10 col-md-offset-2">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><b>Mis</b> Proyectos de investigación</div>
-
                     <div class="panel-body">
-                        <g:if test="${projects}">
-                            <div class="list-group">
-                                <g:each in="${projects}" var="p">
-                                    <g:link controller="ResearchProject" action="show" params="[id:p.id]" class="list-group-item text-capitalize">
-                                        <h4>${p.title} <span class="label label-default">${p.research_areas[0].name}</span></h4>
-                                        <p>${p.description}</p>
-                                    </g:link>
-                                </g:each>
-                            </div>
-                        </g:if>
-                        <g:else>
-                            No participas en ningún proyecto de investigación.
-                        </g:else>
+                        <h4 class="text-uppercase"><%= project.title %><br><small><%= project.age %></small></h4>
+                        <hr>
+                        <p class="text-muted"><%= project.description %></p>
+                        <br>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">Archivos</li>
+                            <li class="list-group-item">No hay archivos</li>
+                        </ul>
+                    </div>
 
-                    </div>
-                    <div class="panel-footer">
-                        <g:link controller="researchProject" action="create" class="btn btn-success right-block">Nuevo Proyecto</g:link>
-                    </div>
                 </div>
-
+                <nav>
+                    <ul class="pager">
+                        <li class="previous"><g:link controller="researchProject"><span
+                                aria-hidden="true">&larr;</span> Volver</g:link></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
+
     <!-- notification panel --
 
     <div class="col-md-2" id="notification-panel">

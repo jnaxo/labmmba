@@ -37,4 +37,9 @@ class ResearchProjectController {
         }
         redirect controller: 'ResearchProject', action: 'index'
     }
+
+    @Secured(['ROLE_ADMIN', 'ROLE_USER'])
+    def show() {
+        render (view: "show", model: [project: Research_project.get(params.id)])
+    }
 }
