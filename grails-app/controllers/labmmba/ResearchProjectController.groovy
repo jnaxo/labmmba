@@ -42,4 +42,10 @@ class ResearchProjectController {
     def show() {
         render (view: "show", model: [project: Research_project.get(params.id)])
     }
+
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    def list(){
+        render (view: "list", model: [research_areas: Research_area.list(), projects: Research_project.list()])
+    }
+
 }

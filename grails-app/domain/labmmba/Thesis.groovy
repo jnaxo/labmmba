@@ -8,8 +8,8 @@ class Thesis {
     int volume
     String publisher
     String url
-    int ISSN
-    String DOI
+    int issn
+    String doi
 
     String state
 
@@ -18,5 +18,12 @@ class Thesis {
     static constraints = {
         keywords nulleable: true
         commits nulleable: true
+        year nullable: true
+        journal nullable: true
+        volume nullable: true
+        publisher nullable: true
+        url nullable: true
+        issn nullable: true
+        doi nullable: true
     }
 }

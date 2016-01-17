@@ -32,8 +32,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><g:link uri="/">Home</g:link></li>
-                        <li><a href="#" >Colaboradores</a></li>
-                        <li><a href="#" >Investigación</a></li>
+
+                        <li ${controllerName.equals('researchProject') ? 'class=active' : ''}>
+                            <g:link controller="researchProject" action="list">Investigación</g:link>
+                        </li>
                         <li ${controllerName.equals('Researcher') ? 'class=active' : ''}>
                             <g:link controller="researcher" action="list">Integrantes Laboratorio</g:link>
                         </li>

@@ -11,9 +11,9 @@ class BootStrap {
     def init = {
 
         /* ResearchAreas */
-        def reseach_areas = (String[])["Biotecnología vegetal", "Compuestos bioactivos", "Microbiología", "Biotecnología Ambiental"]
+        def research_areas = (String[])["Biotecnología vegetal", "Compuestos bioactivos", "Microbiología", "Biotecnología Ambiental"]
 
-        reseach_areas.each{ ra_name ->
+        research_areas.each{ ra_name ->
             new Research_area(name: ra_name).save()
         }
 
@@ -24,6 +24,7 @@ class BootStrap {
 
         def researcher = new Researcher()
         researcher.lab_job = 'external admin'
+        researcher.research_area = Research_area.get(1)
 
         def studies = new Studies(title: 'ingenieria civil construccion', college: 'UTFSM',city:'valparaiso', country:'Chile', year:2012)
 

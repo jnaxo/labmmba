@@ -141,19 +141,25 @@ header{
     margin:5% auto;
 }
 #profile-info{
-    font-size: 11px;
+    font-size: 13px;
     text-transform: capitalize;
 }
 #profile-name{
-    font-size: 11px;
+    font-size: 13px;
     color: #261821;
-    font-weight: 500;
 }
 
 #profile-studies{
     font-weight: 500;
+    text-transform: capitalize;
+}
+#profile-college{
+    text-transform: capitalize;
     color: #888;
 }
+
+
+
 .hr-small{
     margin: 5px;
 }
@@ -210,6 +216,28 @@ header{
 /* location */
 #location-map-img{
     margin: 0 auto;
+}
+
+/* research projects */
+.research-area-list{
+    padding-top: 35px;
+    padding-bottom: 60px;
+}
+.research-area-list-panel{
+    height: 90px;
+}
+
+/* thesis */
+#thesis-data-form{
+    display: none;
+}
+
+.create-form{
+    height: 350px;
+}
+
+#thesis-authors-form, #label-extern-author{
+    display: none;
 }
 
 /* footer */

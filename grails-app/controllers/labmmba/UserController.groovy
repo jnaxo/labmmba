@@ -18,12 +18,14 @@ class UserController {
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def create(){
+        def research_areas = Research_area.list()
+        render(view: "create", model:[research_areas: research_areas])
     }
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def save(){
         def role = Role.findByAuthority('ROLE_USER')
-        def researcher = new Researcher(lab_job: params.labjob)
+        def researcher = new Researcher(lab_job: params.labjob, research_area: params.researcharea)
         def studies = new Studies(title:params.studies, college:params.college)
         def user = new User(username:params.username, password:params.password, name:params.name)
         researcher.user = user

@@ -28,7 +28,7 @@ class User implements Serializable {
 
 	@Override
 	String toString() {
-		username
+		name
 	}
 
 	Set<Role> getAuthorities() {

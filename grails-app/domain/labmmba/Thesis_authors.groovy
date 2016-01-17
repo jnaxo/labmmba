@@ -7,5 +7,6 @@ class Thesis_authors {
     String other_authors
 
     static constraints = {
+        researcher nullable:true
     }
 }

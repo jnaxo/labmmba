@@ -94,14 +94,8 @@
                 </div>
 
                 <div class="form-group">
-                    <select class="form-control" id="labmmba-research-area" name="labmmba-research-area">
-                        <option>Research Area</option>
-                        <option>Biotecnología vegetal</option>
-                        <option>Compuestos bioactivos</option>
-                        <option>Microbiología</option>
-                        <option>Biotecnología Ambiental</option>
-                        <option>Otro</option>
-                    </select>
+                    <g:select class="form-control" id="labmmba-research-area" name="researcharea"
+                              from="${research_areas}" optionKey="id" optionValue="name" noSelection="${['':'Otra área']}"/>
                 </div>
 
                 <nav>

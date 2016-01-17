@@ -33,10 +33,12 @@
                             <li class="navbar-admin ${controllerName.equals('researchProject') ? 'active' : ''}">
                                 <g:link controller="researchProject">Investigaciones</g:link>
                             </li>
-                            <li class="navbar-admin">
-                                <a href="#">Tesis</a>
+                            <li class="navbar-admin ${controllerName.equals('thesis') ? 'active' : ''}">
+                                <g:link controller="Thesis">Tesis</g:link>
                             </li>
-                            <li class="navbar-admin"><a href="#">Docs Científicos</a></li>
+                            <li class="navbar-admin ${controllerName.equals('sciencistPublication') ? 'active' : ''}">
+                                <g:link controller="sciencistPublication">Docs Científicos</g:link>
+                            </li>
                             <li class="navbar-admin"><a href="#">Colaboradores</a></li>
                             <li class="navbar-admin"><g:link uri="#">Account Settings</g:link></li>
                         </ul>
