@@ -3,7 +3,7 @@
 <head>
     <meta name="layout" content="main"/>
     <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}"/>
-    <title>Home - LABMMBA</title>
+    <title>Research Project - LABMMBA</title>
 </head>
 
 <body>

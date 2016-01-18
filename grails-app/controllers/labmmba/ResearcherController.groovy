@@ -8,7 +8,9 @@ class ResearcherController {
     def index() {
         if (isLoggedIn()){
             def user = User.findById(getPrincipal().id)
-            render(view: "index", model:[user: user,researcher:user.getResearcher()])
+            def user_role = UserRole.findByUser(user)
+            //render(view: "index", model:[user: user,researcher:user.getResearcher()])
+            render user_role
 
         }else{
             redirect controller:'User', action: 'login'

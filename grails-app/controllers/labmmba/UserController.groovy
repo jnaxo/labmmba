@@ -6,9 +6,8 @@ class UserController {
 
     static allowedMethods = [save:'POST']
 
-    @Secured(['ROLE_ADMIN'])
+    @Secured(['ROLE_ADMIN', 'ROLE_USER', 'ROLE_DIRECTOR', 'ROLE_ADVISOR'])
     def index() {
-
     }
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
